@@ -1,14 +1,18 @@
-package dev.emmanuelva.javahtmxhospital.domain;
+package dev.emmanuelva.javahtmxhospital.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.Set;
 import java.util.UUID;
 
-@Entity
 @Getter
-public class State {
+@Setter
+@Builder
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -16,6 +20,9 @@ public class State {
     private String normalizedName;
     private String alias;
 
-    @OneToMany(mappedBy = "state")
-    private Set<City> cities;
+    @ManyToOne
+    private State state;
+
+    @OneToMany
+    private Set<ZipCode> zipCodes;
 }
