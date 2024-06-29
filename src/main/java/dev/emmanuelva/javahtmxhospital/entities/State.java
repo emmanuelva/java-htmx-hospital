@@ -1,6 +1,5 @@
 package dev.emmanuelva.javahtmxhospital.entities;
 
-import dev.emmanuelva.javahtmxhospital.models.StateDTO;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
@@ -25,12 +24,4 @@ public class State {
 
     @OneToMany(mappedBy = "state")
     private Set<City> cities;
-
-    public StateDTO toDTO() {
-        return StateDTO.builder()
-                .id(id)
-                .name(name)
-                .alias(alias)
-                .build();
-    }
 }

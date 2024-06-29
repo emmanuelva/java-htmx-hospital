@@ -3,18 +3,18 @@ package dev.emmanuelva.javahtmxhospital.models;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.Set;
+import java.util.AbstractMap.SimpleEntry;
+import java.util.Map;
 import java.util.UUID;
 
-@Builder
 @Data
+@Builder
 public class CityDTO {
     private UUID id;
     private String name;
-    private String normalizedName;
     private String alias;
 
-    private StateDTO state;
+    private SimpleEntry<String, String> state;
 
-    private Set<ZipCodeDTO> zipCodeDTOS;
+    private Map<String, String> zipCodes;
 }
