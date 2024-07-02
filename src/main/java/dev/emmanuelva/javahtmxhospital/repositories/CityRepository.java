@@ -1,9 +1,9 @@
 package dev.emmanuelva.javahtmxhospital.repositories;
 
-import dev.emmanuelva.javahtmxhospital.domain.City;
-import org.springframework.data.repository.CrudRepository;
+import dev.emmanuelva.javahtmxhospital.entities.City;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface CityRepository extends CrudRepository<City, UUID> {
+public interface CityRepository extends JpaRepository<City, UUID> {
 }

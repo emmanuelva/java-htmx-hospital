@@ -1,12 +1,16 @@
-package dev.emmanuelva.javahtmxhospital.domain;
+package dev.emmanuelva.javahtmxhospital.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.UUID;
 
-@Entity
 @Getter
+@Setter
+@Builder
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class ZipCode {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

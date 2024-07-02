@@ -1,9 +1,9 @@
 package dev.emmanuelva.javahtmxhospital.repositories;
 
-import dev.emmanuelva.javahtmxhospital.domain.State;
-import org.springframework.data.repository.CrudRepository;
+import dev.emmanuelva.javahtmxhospital.entities.State;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface StateRepository extends CrudRepository<State, UUID> {
+public interface StateRepository extends JpaRepository<State, UUID> {
 }
